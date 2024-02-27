@@ -5,32 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Binary tree visualization</title>
     <link rel="stylesheet" href="./index.css" />
-    <!-- <script src="sketch.js"></script> -->
-    <script src="test.js"></script>
+    <script src="sketch.js"></script>
     <script src="input.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
   </head>
   <body>
     <main>
-      <h1>Binary tree visualization</h1>
-      <section class="container">
-        <form id="binary-tree-form" class="container" action="">
-          <label for="binary-tree-height" class="input">
-            <input
-              id="binary-tree-height"
-              type="number"
-              class="input__field"
-              value="4"
-            />
-            <span class="input__label">Binary tree height</span>
-          </label>
+      <section style="padding-left: 1rem">
+        <h1>Binary tree visualization</h1>
+        <section class="container">
+          <form id="binary-tree-form" class="container" action="">
+            <label for="binary-tree-height" class="input">
+              <input
+                id="binary-tree-height"
+                type="number"
+                class="input__field"
+                value="4"
+              />
+              <span class="input__label">Binary tree height</span>
+            </label>
+            <div class="button-group">
+              <button id="height-btn" type="submit">Set height</button>
+            </div>
+          </form>
           <div class="button-group">
-            <button id="height-btn" type="submit">Set height</button>
+            <button id="export-btn" class="secondary-btn">
+              Export to image
+            </button>
           </div>
-        </form>
-        <div class="button-group">
-          <button id="export-btn" class="secondary-btn">Export to image</button>
-        </div>
+        </section>
       </section>
     </main>
   </body>
@@ -46,7 +49,6 @@
     const setHeightBtn = document.getElementById("height-btn");
     const heightInput = document.getElementById("binary-tree-height");
     setHeightBtn.addEventListener("click", () => {
-      console.log(heightInput.value);
       if (heightInput.value) {
         setHeight(heightInput.value); // This comes from sketch.js
       }

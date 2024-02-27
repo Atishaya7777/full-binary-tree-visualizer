@@ -14,7 +14,6 @@
   color: var(--color-text);
   background: var(--color-background);
   font-weight: 300;
-  padding: 0 calc(var(--size-bezel) * 3);
 }
 
 * {
